@@ -1,6 +1,6 @@
 @import "node_modules/sass-google-fonts/src/GoogleFonts.scss";
 
-@include google-font("Lato", "100");
+@include google-font("Lato", "100,200");
 
 $primary-color: #222;
 $secondary-color: #307eff;
@@ -8,6 +8,8 @@ $secondary-color: #307eff;
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
+
+@import "menu";
 
 * {
   box-sizing: border-box;
@@ -57,11 +59,13 @@ header {
 main {
   padding: 4rem;
   height: 100%;
-
+  z-index: 0;
   .icons {
     margin-top: 1rem;
+
     a {
       padding: 0.4rem;
+      z-index: 0;
       &:hover {
         color: $secondary-color;
         @include easeOut();
