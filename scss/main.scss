@@ -1,6 +1,6 @@
 @import "node_modules/sass-google-fonts/src/GoogleFonts.scss";
 
-@include google-font("Lato", "100,200");
+@include google-font("Lato", "100,200,300,400");
 @import "config";
 
 $primary-color: #222;
@@ -90,12 +90,48 @@ main {
 }
 
 footer {
-  position: fixed;
+  flex-shrink: 0;
   z-index: 2;
   text-align: center;
   width: 100%;
   left: 0;
   bottom: 0;
+}
+
+.spacer-about {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  height: 3px;
+  width: 100%;
+  background: white;
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio";
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    margin-top: 4rem;
+    width: 200px;
+    height: 200px;
+    background: url("../../img/test.jpg");
+    background-size: contain;
+    border-radius: 50%;
+  }
+  .text-bio {
+    font-size: 1rem;
+  }
+
+  .bio {
+    margin-top: 4rem;
+    grid-area: bio;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
 }
 
 @import "mobile";

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:100,200");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,200,300,400");
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -58,8 +58,7 @@
       height: 250px;
       background: url("../../img/test.jpg");
       background-size: contain;
-      border-radius: 50%;
-      border: solid 3px #307eff; }
+      border-radius: 50%; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
@@ -158,12 +157,41 @@ main {
   z-index: -10; }
 
 footer {
-  position: fixed;
+  flex-shrink: 0;
   z-index: 2;
   text-align: center;
   width: 100%;
   left: 0;
   bottom: 0; }
+
+.spacer-about {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  height: 3px;
+  width: 100%;
+  background: white; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio";
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    margin-top: 4rem;
+    width: 200px;
+    height: 200px;
+    background: url("../../img/test.jpg");
+    background-size: contain;
+    border-radius: 50%; }
+  .about-info .text-bio {
+    font-size: 1rem; }
+  .about-info .bio {
+    margin-top: 4rem;
+    grid-area: bio;
+    font-size: 1.5rem;
+    font-weight: 300; }
 
 @media screen and (max-width: 768px) {
   main {
