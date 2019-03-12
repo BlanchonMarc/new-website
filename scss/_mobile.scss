@@ -4,6 +4,36 @@
 
 // Desktops & Laptops
 @include mediaLg {
+  .topics {
+    margin-top: 4rem;
+    padding: 2rem;
+    width: auto;
+    h3 {
+      margin: 2rem 2rem;
+    }
+    border: 1px dashed $secondary-color;
+  }
+  .research-container {
+    padding-top: 5rem;
+    h2 {
+      margin-bottom: -2rem;
+    }
+    h3,
+    h4,
+    h5 {
+      font-weight: 500;
+      line-height: 1rem;
+      padding-left: 2rem;
+    }
+    h4,
+    h5 {
+      font-weight: 300;
+      padding-left: 3rem;
+    }
+    .research-item {
+      margin-top: 5rem;
+    }
+  }
 }
 
 // Tablets & Small Laptops
@@ -64,6 +94,46 @@
 
     grid-template-columns: 1fr;
   }
+  .topics {
+    margin-top: 4rem;
+    padding: 2rem;
+    width: auto;
+    h3 {
+      margin: 2rem 3rem;
+      display: inherit;
+    }
+    border: 1px dashed $secondary-color;
+  }
+
+  .research-container {
+    padding-top: 5rem;
+    h2 {
+      margin-bottom: -2rem;
+    }
+    h3,
+    h4,
+    h5 {
+      font-weight: 500;
+      line-height: 1rem;
+      padding-left: 2rem;
+    }
+    h4,
+    h5 {
+      font-weight: 300;
+      padding-left: 3rem;
+    }
+    .research-item {
+      margin-top: 5rem;
+      &:nth-child(odd) {
+        text-align: inherit;
+        border-right: 1px solid white;
+      }
+      &:nth-child(even) {
+        text-align: inherit;
+        border-left: 1px solid white;
+      }
+    }
+  }
 }
 
 // Smartphones
@@ -77,6 +147,35 @@
     .lg-heading {
       margin-top: 1rem;
       font-size: 3rem;
+    }
+  }
+  .research-container {
+    padding-top: 5rem;
+    h2 {
+      margin-bottom: -2rem;
+    }
+    h3,
+    h4,
+    h5 {
+      font-weight: 500;
+      line-height: 1rem;
+      padding-left: 2rem;
+    }
+    h4,
+    h5 {
+      font-weight: 300;
+      padding-left: 3rem;
+    }
+    .research-item {
+      margin-top: 5rem;
+      &:nth-child(odd) {
+        text-align: inherit;
+        border-right: 1px solid white;
+      }
+      &:nth-child(even) {
+        text-align: inherit;
+        border-left: 1px solid white;
+      }
     }
   }
 }
